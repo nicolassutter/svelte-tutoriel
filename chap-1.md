@@ -43,7 +43,8 @@ Lorsque vous appuyez une nouvelle fois sur ce même bouton, la barre de navigati
 Créons une application simple et commençons à découvrir certaines fonctionnalités de Svelte.
 
 Ajoutez le code `HTML` avant l'élément h1 :
-```
+
+```svelte
 <label for="name">Name</label>
 <input id="name" value={name}>
 ```
@@ -120,12 +121,13 @@ Dans le code précédent, nous calculons une nouvelle valeur pour `greeting` cha
 
 Ajoutons un champ de type checkbox afin de modifier la valeur de `upper`.
 
-```
+```svelte
 <label><input type="checkbox" bind:checked={upper}> Uppercase </label>
 ```
+
 N'oublions pas de changer le titre :
 
-```
+```svelte
 <h1 style="color: {color}">{casedGreeting}</h1>
 ```
 
