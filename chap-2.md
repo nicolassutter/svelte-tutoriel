@@ -1,6 +1,6 @@
 # Comment créer un composant ?
 
-Dans ce cours, nous allons approfondir la création des composants en créant des `.svelte`. Ces fichiers permettent d'implémenter en JavaScript la logique et l'état du HTML. Le css quant à lui, stylise les éléments au sein du composant.
+Dans ce cours, nous allons approfondir la création des composants en créant des fichiers `.svelte`. Ces fichiers permettent d'implémenter en JavaScript la logique et l'état du HTML. Le css quant à lui, stylise les éléments au sein du composant.
 
 Les composants sont composés de parties étroitement liées à l'interface utilisateur. Ils scindent une interface utilisateur potentiellement réutilisables. Certains composants représentent des pages entières, tandis que d'autres sont utilisés dans des pages. Par exemple, une page qui affiche une liste de courses peut être implémentée par un composant du nom "ShoppingList". Ce composant peut rendre chaque élément dans un autre composant plus petit. ce petit composant pourrait se nommer "item" par exemple. Les composants svelte ont une syntaxe similaire au HTML.
 
@@ -18,10 +18,10 @@ Les composants Svelte sont définis par le contenu d'un fichier, et non par un c
 
 Les fichiers .svelte peuvent contenir :
 
-- au maximum un élément `script` `context="module"`
-- un élément de type `script`
-- un élément de type `style`
-- un nombre quelconque d'éléments `HTML` qui peuvent apparaître dans l'élément body.
+- Au maximum un élément `script` `context="module"`
+- Un élément de type `script`
+- Un élément de type `style`
+- Un nombre quelconque d'éléments `HTML` qui peuvent apparaître dans l'élément body.
 
 Chacun d'entre eux est facultatif et ces éléments peuvent apparaître
 dans n'importe quel ordre.
@@ -61,10 +61,10 @@ ou
 
 Les props (propriétés) d'un composant permettent de transmettre :
 
-- des chaines de caractères
-- des objets
-- des nombres
-- des composants
+- Des chaines de caractères
+- Des objets
+- Des nombres
+- Des composants
 - etc.
 
 Ainsi, le composant récupère via ces props toutes les données dont il a besoin pour fonctionner.
@@ -83,7 +83,7 @@ Voici un exemple plus concret du passage de valeur à un composant svelte :
 />
 ```
 
-> REMARQUE: lorsque une valeur n'est pas définie ou qu'elle est `null`, elle ne sera pas ajouter dans le `DOM`. Par exemple, au sein du composant il y a ce tag `<img alt={description} src={imageUrl}>`. Si la variable description est nulle ou indéfinie, l'élément `img` n'aura pas d'attribut `alt`.
+> REMARQUE: lorsque une valeur n'est pas définie ou qu'elle est `null`, elle ne sera pas ajoutée dans le `DOM`. Par exemple, au sein du composant il y a ce tag `<img alt={description} src={imageUrl}>`. Si la variable description est nulle ou indéfinie, l'élément `img` n'aura pas d'attribut `alt`.
 
 
 - Aller dans le REPL
