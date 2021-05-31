@@ -2,13 +2,13 @@
 
 Nous allons aborder essentiellement 3 types de structures de contrôle au sein du HTML d'un composant SvelteJS.
 
-- if / else if / else  qui sert à créer un système de condition.
-- each est un type de boucle / loop
-- await sert à récupérer les données [d'une promesse](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- `if` / `else if` / `else`  qui sert à créer un système de condition.
+- `each` est un type de boucle / loop
+- `await` sert à récupérer les données [d'une promesse](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-## la logique avec if
+## La logique avec `if`
 
-Dans le dernier exercice du cours précédent, j'ai évoqué le if. C'est la structure la plus simple à mettre en place. Comme dans tous les bons langages, on retrouve ce type d'instruction. SvelteJS n'échappe pas à cette règle. Voyez ce petit exemple très simple avec un select customisé.
+Dans le dernier exercice du cours précédent, j'ai évoqué le `if`. C'est la structure la plus simple à mettre en place. Comme dans tous les bons langages, on retrouve ce type d'instruction. SvelteJS n'échappe pas à cette règle. Voyez ce petit exemple très simple avec un select customisé.
 
 ```html
 <script>
@@ -41,9 +41,9 @@ Dans le dernier exercice du cours précédent, j'ai évoqué le if. C'est la str
 {/if}
 ```
 
-## Les itérations avec each
+## Les itérations avec `each`
 
-Comme en PHP, Python, Ruby, JS, Java, etc., il y a des boucles. En SvelteJS, vous n'avez qu'un seul type de boucle "each". La syntaxe est spécifique. Supposons que nous ayons une variable de type tableau (array) et que nous souhaitons afficher le contenu dans une liste. C'est très simple :
+Comme en PHP, Python, Ruby, JS, Java, etc., il y a des boucles. En SvelteJS, vous n'avez qu'un seul type de boucle, `each`. La syntaxe est spécifique. Supposons que nous ayons une variable de type tableau (array) et que nous souhaitons afficher le contenu dans une liste. C'est très simple :
 
 ```html
 <script>
@@ -76,7 +76,7 @@ Dans le cas où vous auriez besoin de l'index, il vous suffira d'ajouter ce dern
 </ul>
 ```
 
-Allons un peu plus loin avec cette structure de contrôle. Vous devez énumérer une liste de personnes. Vous avez 2 options. La plus simple étant de reprendre la même manière que la précédente. C'est quelque chose de classique et logique.
+Allons un peu plus loin avec cette structure de contrôle. Vous devez énumérer une liste de personnes. Vous avez 2 options. La plus simple étant de reprendre la même manière que la précédente. 
 
 ```html
 <script>
@@ -118,7 +118,7 @@ Nous pouvons cependant utiliser ce que l'on appelle la destructuration. ça perm
 </ul>
 ```
 
-Dans certains cas, vous risquez d'être coincé suite à la structure de l'objet à itérer. les méthodes [keys](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), [values](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/values) et surtout [entries](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) de class Object vont vous être très utiles :
+Dans certains cas, vous risquez d'être coincé suite à la structure de l'objet à itérer. les méthodes [keys](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), [values](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/values) et surtout [entries](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) de class `Object` vont vous être très utiles :
 
 ```html
 <script>
@@ -144,7 +144,7 @@ Dans certains cas, vous risquez d'être coincé suite à la structure de l'objet
 </ul>
 ```
 
-## installer en local un environnement svelte
+## Installer en local un environnement svelte
 
 À ce stade, je vous recommande d'installer en local un environnement svelte. Rien de plus simple. Vous avez 2 solutions. La solution que j'utilise pour installer Svelte :
 
@@ -156,26 +156,26 @@ Dans certains cas, vous risquez d'être coincé suite à la structure de l'objet
 ```
 npm i
 ```
-- pour lancer le projet, saisissez :
+- Pour lancer le projet, saisissez :
 ```
 npm run dev
 ```
 
 La 2e solution :
-- installez en mode général le binaire degit (pour les utilisateurs de GNU/Linux, il y a de fortes chances que vous ayez besoin de passer en admin)
+- Installez en mode global le package `npm` `degit` (pour les utilisateurs de GNU/Linux, il y a de fortes chances que vous ayez besoin de passer en admin)
 ```
 npm i -g degit
 ```
-- saisissez la commande suivante
+- Saisissez la commande suivante
 ```
 npx degit sveltejs/template my-svelte-project
 ```
-- allez dans le dossier my-svelte-project
-- saisissez la commande :
+- Allez dans le dossier my-svelte-project
+- Saisissez la commande :
 ```
 npm i
 ```
-- pour lancer le projet, saisissez :
+- Pour lancer le projet, saisissez :
 ```
 npm run dev
 ```
@@ -184,15 +184,16 @@ Si tout va bien, votre terminal va vous proposez d'aller sur une url.
 
 ## Gérer les promesses
 
-Nous abordons le dernier type de structure de contrôle. Celle ci est un peu spécial si vous n'êtes pas familié avec les dernières spécificités du Javascript. Il va falloir d'abords connaître [les promesses](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Bien que vous puissiez vous en créer très facilement avec l'utilisation de l'objet [XMLHttRequest](https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest), je vous recommande vivement de regarder [fetch](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API). Vous verrez que les requêtes ajax vous seront très agréables une fois que vous aurez dompté la bête. Tout d'abords, nous avons dans le projet, ce fichier :
+Nous abordons le dernier type de structure de contrôle. Celle ci est un peu spéciale si vous n'êtes pas familié avec les dernières spécificités du Javascript. Il va falloir d'abords connaître [les promesses](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Bien que vous puissiez vous en créer très facilement avec l'utilisation de l'objet [XMLHttRequest](https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest), je vous recommande vivement de regarder [fetch](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API). Vous verrez que les requêtes ajax vous seront très agréables une fois que vous aurez dompté la bête. Tout d'abords, nous avons dans le projet, ce fichier :
 
 
-public/data.json
+`public/data.json`
 ```json
 [{"name": "centres de formation professionnelle", "slug": "centres-de-formation-professionnelle", "subcategory": [{"name": "commerciale", "slug": "commerciale"}, {"name": "communication", "slug": "communication"}, {"name": "comptabilit\u00e9 et juridique", "slug": "comptabilite-et-juridique"}, {"name": "construction/ BTP", "slug": "construction-btp"}, {"name": "finance et assurances", "slug": "finance-et-assurances"}, {"name": "h\u00f4tellerie/ restauration", "slug": "hotellerie-restauration"}, {"name": "informatique", "slug": "informatique"}, {"name": "management et d\u00e9veloppement personnel", "slug": "management-et-developpement-personnel"}, {"name": "multi-sp\u00e9cialistes", "slug": "multi-specialistes"}, {"name": "QSSE", "slug": "qsse"}, {"name": "ressources humaines", "slug": "ressources-humaines"}, {"name": "transformation num\u00e9rique et communication", "slug": "transformation-numerique-et-communication"}]}, {"name": "centres de formation ge\u0301ne\u0301rale", "slug": "centres-de-formation-generale", "subcategory": [{"name": "\u00c9cole de code", "slug": "ecole-de-code"}, {"name": "\u00c9coles \u00e0 distance", "slug": "ecoles-a-distance"}, {"name": "FOAD (Formations Ouvertes \u00e0 Distance)", "slug": "foad-formations-ouvertes-a-distance"}]}, {"name": "e\u0301coles de langues", "slug": "ecoles-de-langues", "subcategory": [{"name": "Formation linguistique", "slug": "formation-linguistique"}, {"name": "S\u00e9jours linguistiques", "slug": "sejours-linguistiques"}]}, {"name": "e-learning et application mobile", "slug": "e-learning-et-application-mobile", "subcategory": [{"name": "Cours de langue en application mobile/ Seriousgames", "slug": "cours-de-langue-en-application-mobile-seriousgames"}, {"name": "Cours de langue en ligne", "slug": "cours-de-langue-en-ligne"}, {"name": "Cours en application mobile/ Seriousgames - other topics", "slug": "cours-en-application-mobile-seriousgames-other-topics"}, {"name": "Formations en e-learning", "slug": "formations-en-e-learning"}, {"name": "MOOC (Massive Open Online Courses)", "slug": "mooc-massive-open-online-courses"}]}]
 ```
 
-src/Navigation.svelte
+`src/Navigation.svelte`
+
 ```html
 <script>
     export let data;
@@ -220,7 +221,7 @@ src/Navigation.svelte
 </nav>
 ```
 
-App.svelte
+`App.svelte`
 ```html
 <script>
 	import Navigation from './Navigation.svelte';
@@ -239,4 +240,4 @@ App.svelte
 <Navigation {data} />
 ```
 
-Les structures de contrôle dans Svelte sont assez simples à appréhender finalement. Dans le prochain cours, nous aborderons plus en détail les interactions entres les composants. 
+Les structures de contrôle dans Svelte sont finalement assez simples à appréhender. Dans le prochain cours, nous aborderons plus en détail les interactions entre les composants. 
